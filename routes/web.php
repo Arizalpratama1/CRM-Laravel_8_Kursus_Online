@@ -8,12 +8,17 @@ use App\Http\Controllers\{
     KategoriController,
     FrontendController,
     KelasController,
+    EventController,
     RoleAksesController
 };
 
 Route::get('/', [FrontendController::class, 'index']);
 
 Route::get('/kelas', [FrontendController::class, 'kelas']);
+
+Route::get('/event', [FrontendController::class, 'event']);
+
+Route::get('/detailevent/{id}', [FrontendController::class, 'eventDetail']);
 
 Route::get('/detailkelas/{id}', [FrontendController::class, 'kelasDetail']);
 
@@ -28,11 +33,15 @@ Route::middleware(['auth'])->group(function(){
     
     Route::resource('/admin/kelas', KelasController::class);
     
+    Route::resource('/admin/event', EventController::class);
+    
     Route::get('/admin/pembayaran', [KelasController::class, 'pembayaran']);
 
     // Role Management
     route::get('/admin/role-akses', [RoleAksesController::class, 'index']);
+    
     route::get('/admin/role-akses/{id}', [RoleAksesController::class, 'show'])->whereNumber('id');
+    
     route::post('/admin/role-akses/{id}', [RoleAksesController::class, 'store_update'])->whereNumber('id');
 
     //backend siswa

@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Tentor;
 use App\Models\Kelas;
 use App\Models\Video;
+use App\Models\Event;
 
 class FrontendController extends Controller
 {
@@ -13,13 +14,15 @@ class FrontendController extends Controller
 
         $tentor = Tentor::all();
         $kelas = Kelas::all();
+        $event = Event::all();
 
         return view('frontend.index', compact(
-            'tentor','kelas'
+            'tentor','kelas','event'
         ));
     }
 
     public function kelas(){
+        
         $kelas = Kelas::all();
         
         return view('frontend.kelas', compact(
@@ -34,6 +37,24 @@ class FrontendController extends Controller
 
         return view('frontend.kelasdetail', compact(
             'kelas','video'
+        ));
+    }
+
+    public function event(){
+        
+        $event = Event::all();
+
+        return view('frontend.event', compact(
+            'event'
+        ));
+    }
+    
+    public function eventDetail($id){
+        
+        $event = Event::find($id);
+
+        return view('frontend.eventdetail', compact(
+            'event'
         ));
     }
 }

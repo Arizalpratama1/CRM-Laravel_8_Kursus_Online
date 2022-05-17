@@ -20,6 +20,10 @@
             <li class="{{ (request()->is('admin/kelas*')) ? 'active' : '' }}"><a class="d-flex align-items-center" href="{{ url('/admin/kelas') }}"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Analytics">Master Kelas</span></a>
             </li>
         </ul>
+        <ul class="menu-content">
+            <li class="{{ (request()->is('admin/event*')) ? 'active' : '' }}"><a class="d-flex align-items-center" href="{{ url('/admin/event') }}"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Analytics">Master Event</span></a>
+            </li>
+        </ul>
     </li>
     <li class="nav-item {{ (request()->is('admin/pembayaran*')) ? 'active' : '' }}" >
         <a href="{{ url('admin/pembayaran') }}" class="d-flex align-items-center">

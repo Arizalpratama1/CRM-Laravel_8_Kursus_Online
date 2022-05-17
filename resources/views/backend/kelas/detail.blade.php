@@ -78,6 +78,7 @@ Detail Class
 </div>
 
 <div class="col-md-12">
+<form action="/admin/kelas/{{ $kelas->id }}" method="POST">
     <div class="card">
         <div class="card-body">
             <!-- <button class="btn btn-outline-secondary" name="lagi" type="submit">Simpan & Baru</button> -->

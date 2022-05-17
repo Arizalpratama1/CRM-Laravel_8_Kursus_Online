@@ -52,7 +52,7 @@
           <li><a href="{{ url('/') }}#about">About</a></li>
           <li><a href="{{ url('/kelas') }}">Courses</a></li>
           <li><a href="{{ url('/') }}#trainers">Trainers</a></li>
-          <li><a href="events.html">Events</a></li>
+          <li><a href="{{ url('/event') }}">Events</a></li>
           <!-- <li><a href="pricing.html">Pricing</a></li> -->
 
           <!-- <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
