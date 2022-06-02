@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use DB;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -23,6 +24,11 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        view()->composer('*', function($view){
+
+                $kategori_sidebar = DB::table('kategori_kelas')->get();
+                $view->with('kategori_sidebar', $kategori_sidebar);
+            
+        });
     }
 }

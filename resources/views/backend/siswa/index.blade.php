@@ -21,7 +21,7 @@ List Kelas
                     <p class="price">{{ rupiah($kelas->nominal) }}</p>
                 </div>
 
-                <h3><a href="course-details.html">{{ $kelas->nama_kelas }}</a></h3>
+                <h3><a href="{{ url('/siswa/list-kelas/beli/'. $kelas->id) }}">{{ $kelas->nama_kelas }}</a></h3>
             </div>
                 <a href="{{ url('/siswa/list-kelas/beli/'. $kelas->id) }}" type="button" class="btn btn-primary">
                 <i class="fas fa-shopping-cart"></i>&nbsp Lihat Detail Kelas</a>

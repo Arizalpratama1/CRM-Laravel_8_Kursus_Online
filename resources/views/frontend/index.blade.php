@@ -16,21 +16,22 @@
 
         <div class="row">
           <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100">
+            <!-- <embed src="https://www.youtube.com/embed/prDsdioSoOc" style="width: 636px; height: 477px;" type=""> -->
             <img src="{{ asset('frontend/assets/img/about.jpg') }}" class="img-fluid" alt="">
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
-            <h3>Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.</h3>
-            <p class="fst-italic">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-              magna aliqua.
+            <h3>Creative Academy</h3>
+            <p class="fst-italic" style="text-align:justify;">
+              Creative Academy merupakan Start Up baru dari Creative Media, Creative Media merupakan perusahaan Digital Agency & IT Consultant di Surabaya. Kami merupakan Lembaga Pendidikan Non Formal yang Resmi mendapat izin penyelenggaraan, apresiasi dan dukungan penuh dari Dinas Pendidikan Kota Surabaya. Kami hadir di Kota Surabaya menjawab kebutuhan generasi millennial yang tidak lepas dari Kebutuhan IT dan Multimedia. Kami berfokus pada : 
             </p>
             <ul>
-              <li><i class="bi bi-check-circle"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-              <li><i class="bi bi-check-circle"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-              <li><i class="bi bi-check-circle"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</li>
+              <li><i class="bi bi-check-circle"></i> <a href="https://creativemedia.id/profil-kursus-komputer-surabaya/"> Computer Course & Trainings</a> </li>
+              <li><i class="bi bi-check-circle"></i> <a href="https://creativemedia.id/jasa-desain-grafis-surabaya/"> Branding & Desain</a> </li>
+              <li><i class="bi bi-check-circle"></i><a href="https://creativemedia.id/web-development-cara-membuat-website-powerfull/"> Web Development</a> </li>
+              <li><i class="bi bi-check-circle"></i><a href="https://creativemedia.id/jasa-pembuatan-program-dan-aplikasi-android-surabaya/"> Mobile Apps Development</a> </li>
             </ul>
-            <p>
-              Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+            <p class="fst-italic" style="text-align:justify;">
+            Mereka datang dari berbagai kalangan, mulai dari Pelajar, Mahasiswa, Staff Perusahaan, Pegawasi Swasta, PNS, Pegawai Bank, Wirausaha, Owner Perusahaan, Pebisnis Online, dll. Mereka berdatangan dari berbagai kota dan wilayah yang tersebar di Indonesia & Mancanegara. Semua itu didasari karena mereka tau, bahwa kami adalah pilihan terbaik untuk mengembangkan skill melalui jalur Pendidikan Non Formal. Mereka datang dari berbagai daerah untuk belajar secara langsung ditempat kami.
             </p>
 
           </div>
@@ -46,22 +47,22 @@
         <div class="row counters">
 
           <div class="col-lg-3 col-6 text-center">
-            <span data-purecounter-start="0" data-purecounter-end="1232" data-purecounter-duration="1" class="purecounter"></span>
+            <span data-purecounter-start="0" data-purecounter-end="{{ \App\Models\User::count() }}" data-purecounter-duration="1" class="purecounter"></span>
             <p>Students</p>
           </div>
 
           <div class="col-lg-3 col-6 text-center">
-            <span data-purecounter-start="0" data-purecounter-end="64" data-purecounter-duration="1" class="purecounter"></span>
+            <span data-purecounter-start="0" data-purecounter-end="{{ \App\Models\Kelas::count() }}" data-purecounter-duration="1" class="purecounter"></span>
             <p>Courses</p>
           </div>
 
           <div class="col-lg-3 col-6 text-center">
-            <span data-purecounter-start="0" data-purecounter-end="42" data-purecounter-duration="1" class="purecounter"></span>
+            <span data-purecounter-start="0" data-purecounter-end="{{ \App\Models\Event::count() }}" data-purecounter-duration="1" class="purecounter"></span>
             <p>Events</p>
           </div>
 
           <div class="col-lg-3 col-6 text-center">
-            <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1" class="purecounter"></span>
+            <span data-purecounter-start="0" data-purecounter-end="{{ \App\Models\Tentor::count() }}" data-purecounter-duration="1" class="purecounter"></span>
             <p>Trainers</p>
           </div>
 
@@ -77,13 +78,12 @@
         <div class="row">
           <div class="col-lg-4 d-flex align-items-stretch">
             <div class="content">
-              <h3>Why Choose Mentor?</h3>
+              <h3>Kenapa Creative Academy Berbeda?</h3>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit
-                Asperiores dolores sed et. Tenetur quia eos. Autem tempore quibusdam vel necessitatibus optio ad corporis.
+                Sudah saatnya anda bijak memilih sumber belajar terbaik. Tak hanya materi yang terjamin, Creative Academy juga memiliki Trainer yang berpengalaman di Bidangnya.
               </p>
               <div class="text-center">
-                <a href="about.html" class="more-btn">Learn More <i class="bx bx-chevron-right"></i></a>
+                <a href="{{ url('/') }}#about" class="more-btn">Learn More <i class="bx bx-chevron-right"></i></a>
               </div>
             </div>
           </div>
@@ -93,22 +93,22 @@
                 <div class="col-xl-4 d-flex align-items-stretch">
                   <div class="icon-box mt-4 mt-xl-0">
                     <i class="bx bx-receipt"></i>
-                    <h4>Corporis voluptates sit</h4>
-                    <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>
+                    <h4>Belajar Fleksibel Sesuai Jadwal Anda</h4>
+                    <p>Belajar kapan pun, di mana pun, secara mandiri. Bebas memilih kelas sesuai minat belajar. Akses seumur hidup ke kelas dan forum diskusi setelah membeli kelas.</p>
                   </div>
                 </div>
                 <div class="col-xl-4 d-flex align-items-stretch">
                   <div class="icon-box mt-4 mt-xl-0">
                     <i class="bx bx-cube-alt"></i>
-                    <h4>Ullamco laboris ladore pan</h4>
-                    <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt</p>
+                    <h4>Materi Pembelajaran</h4>
+                    <p>Materi kelas langsung kepada end-point sesuai studi kasus. Diajarkan dari awal hingga akhir sesuai studi kasus.</p>
                   </div>
                 </div>
                 <div class="col-xl-4 d-flex align-items-stretch">
                   <div class="icon-box mt-4 mt-xl-0">
                     <i class="bx bx-images"></i>
-                    <h4>Labore consequatur</h4>
-                    <p>Aut suscipit aut cum nemo deleniti aut omnis. Doloribus ut maiores omnis facere</p>
+                    <h4>Setelah pembelajaran</h4>
+                    <p>Setelah pembelajaran anda bisa mengerjakan project sesuai dengan kelas yang telah diambil</p>
                   </div>
                 </div>
               </div>
@@ -119,6 +119,15 @@
       </div>
     </section><!-- End Why Us Section -->
 
+    <!-- ======= Breadcrumbs ======= -->
+    <div class="breadcrumbs" data-aos="fade-in">
+      <div class="container">
+        <h2>15 Bidang Studi</h2>
+        <p>Creative Academy memiliki 15 Bidang Studi. Bidang Studi tersebut diantaranya dibawah ini</p>
+      </div>
+    </div><!-- End Breadcrumbs -->
+    <br>
+
     <!-- ======= Features Section ======= -->
     <section id="features" class="features">
       <div class="container" data-aos="fade-up">
@@ -126,74 +135,86 @@
         <div class="row" data-aos="zoom-in" data-aos-delay="100">
           <div class="col-lg-3 col-md-4">
             <div class="icon-box">
-              <i class="ri-store-line" style="color: #ffbb2c;"></i>
-              <h3><a href="">Lorem Ipsum</a></h3>
+              <i class="ri-macbook-line" style="color: #0F00A2;"></i>
+              <h3><a href="">Komputer Umum dan Internet</a></h3>
             </div>
           </div>
           <div class="col-lg-3 col-md-4 mt-4 mt-md-0">
             <div class="icon-box">
-              <i class="ri-bar-chart-box-line" style="color: #5578ff;"></i>
-              <h3><a href="">Dolor Sitema</a></h3>
+              <i class="ri-folders-line" style="color: #ffbb2c;"></i>
+              <h3><a href="">Administrasi Perkantoran</a></h3>
             </div>
           </div>
           <div class="col-lg-3 col-md-4 mt-4 mt-md-0">
             <div class="icon-box">
-              <i class="ri-calendar-todo-line" style="color: #e80368;"></i>
-              <h3><a href="">Sed perspiciatis</a></h3>
+              <i class="ri-mac-line" style="color: #e80368;"></i>
+              <h3><a href="">Komputer Akuntansi</a></h3>
             </div>
           </div>
           <div class="col-lg-3 col-md-4 mt-4 mt-lg-0">
             <div class="icon-box">
-              <i class="ri-paint-brush-line" style="color: #e361ff;"></i>
-              <h3><a href="">Magni Dolores</a></h3>
+              <i class="ri-ball-pen-fill" style="color: #A23100;"></i>
+              <h3><a href="">Animasi</a></h3>
             </div>
           </div>
           <div class="col-lg-3 col-md-4 mt-4">
             <div class="icon-box">
-              <i class="ri-database-2-line" style="color: #47aeff;"></i>
-              <h3><a href="">Nemo Enim</a></h3>
+              <i class="ri-vidicon-2-fill" style="color: #060202;"></i>
+              <h3><a href="">Editing Video</a></h3>
             </div>
           </div>
           <div class="col-lg-3 col-md-4 mt-4">
             <div class="icon-box">
-              <i class="ri-gradienter-line" style="color: #ffa76e;"></i>
-              <h3><a href="">Eiusmod Tempor</a></h3>
+              <i class="ri-camera-3-line" style="color: #D30006;"></i>
+              <h3><a href="">Photography</a></h3>
             </div>
           </div>
           <div class="col-lg-3 col-md-4 mt-4">
             <div class="icon-box">
-              <i class="ri-file-list-3-line" style="color: #11dbcf;"></i>
-              <h3><a href="">Midela Teren</a></h3>
+              <i class="ri-bar-chart-grouped-fill" style="color: #11dbcf;"></i>
+              <h3><a href="">Digital Marketing</a></h3>
             </div>
           </div>
           <div class="col-lg-3 col-md-4 mt-4">
             <div class="icon-box">
-              <i class="ri-price-tag-2-line" style="color: #4233ff;"></i>
-              <h3><a href="">Pira Neve</a></h3>
+              <i class="ri-mark-pen-line" style="color: #4233ff;"></i>
+              <h3><a href="">Desain Grafis</a></h3>
             </div>
           </div>
           <div class="col-lg-3 col-md-4 mt-4">
             <div class="icon-box">
-              <i class="ri-anchor-line" style="color: #b2904f;"></i>
-              <h3><a href="">Dirada Pack</a></h3>
+              <i class="ri-paint-brush-line" style="color: #E80252;"></i>
+              <h3><a href="">Desain Interior</a></h3>
             </div>
           </div>
           <div class="col-lg-3 col-md-4 mt-4">
             <div class="icon-box">
-              <i class="ri-disc-line" style="color: #b20969;"></i>
-              <h3><a href="">Moton Ideal</a></h3>
+              <i class="ri-pencil-ruler-2-line" style="color: #b20969;"></i>
+              <h3><a href="">Desain Arsitektur</a></h3>
             </div>
           </div>
           <div class="col-lg-3 col-md-4 mt-4">
             <div class="icon-box">
-              <i class="ri-base-station-line" style="color: #ff5828;"></i>
-              <h3><a href="">Verdo Park</a></h3>
+              <i class="ri-html5-line" style="color: #ff5828;"></i>
+              <h3><a href="">Website Design CMS</a></h3>
             </div>
           </div>
           <div class="col-lg-3 col-md-4 mt-4">
             <div class="icon-box">
-              <i class="ri-fingerprint-line" style="color: #29cc61;"></i>
-              <h3><a href="">Flavor Nivelanda</a></h3>
+              <i class="ri-terminal-box-line" style="color: #29cc61;"></i>
+              <h3><a href="">Pemrograman Dasar</a></h3>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 mt-4">
+            <div class="icon-box">
+              <i class="ri-code-box-line" style="color: #E87802;"></i>
+              <h3><a href="">Pemrograman Web</a></h3>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 mt-4">
+            <div class="icon-box">
+              <i class="ri-braces-line" style="color: #060202;"></i>
+              <h3><a href="">Pemrograman Java Android</a></h3>
             </div>
           </div>
         </div>
@@ -227,6 +248,7 @@
                 <div class="d-flex justify-content-between align-items-center mb-3">
                   <h4>{{ $kelas->kategorikelas->nama_kategori }}</h4>
                   <p class="price">{{ rupiah($kelas->nominal) }}</p>
+                  <!-- <span style="text-decoration: line-through red;"> rupiah($kelas->nominal) </span> -->
                 </div>
 
                 <h3><a href="{{ url('/detailkelas/'. $kelas->id) }}">{{ $kelas->nama_kelas }}</a></h3>
@@ -318,6 +340,95 @@
 
       </div>
     </section><!-- End Events Section -->
+
+    <!-- ======= Breadcrumbs ======= -->
+    <div class="breadcrumbs" data-aos="fade-in">
+      <div class="container">
+        <h2>Contact</h2>
+        <p>Est dolorum ut non facere possimus quibusdam eligendi voluptatem. Quia id aut similique quia voluptas sit quaerat debitis. Rerum omnis ipsam aperiam consequatur laboriosam nemo harum praesentium. </p>
+      </div>
+    </div><!-- End Breadcrumbs -->
+      <br><br><br><br><br>
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div data-aos="fade-up">
+        <!-- <iframe style="border:0; width: 100%; height: 350px;" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" allowfullscreen></iframe> -->
+          <iframe style="border:0; width: 100%; height: 350px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.4566665620127!2d112.76780421450378!3d-7.302480573815449!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7fa5691112989%3A0xfa01325a6e99771!2sCREATIVE%20MEDIA%20KCP%20NGINDEN!5e0!3m2!1sid!2sid!4v1653029457393!5m2!1sid!2sid" frameborder="0" allowfullscreen></iframe>
+      </div>
+
+      <div class="container" data-aos="fade-up">
+
+        <div class="row mt-5">
+
+          <div class="col-lg-4">
+            <div class="info">
+              <div class="address">
+                <i class="bi bi-geo-alt"></i>
+                <h4>Location:</h4>
+                <h6>&nbsp;&nbsp;&nbsp; <strong>Creative Media Surabaya Timur:</strong> </h6>
+                <p>Jl. Nginden Intan Timur XVIII No.A3-10, Nginden Jangkungan, Kec. Sukolilo, Kota SBY, Jawa Timur 60118</p>
+                <br>
+                <h6>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong> Creative Media Surabaya Barat:</strong></h6>
+                <p>Kawasan Darmo Satelit, Jl. Raya Tubanan Baru No.10 Blok K-15, Tanjungsari, Kec. Sukomanunggal, Kota SBY, Jawa Timur 60188</p>
+              </div>
+
+              <div class="email">
+                <i class="bi bi-envelope"></i>
+                <h4>Email:</h4>
+                <h6>&nbsp;&nbsp;&nbsp; <strong> Creative Media Surabaya Timur:</strong></h6>
+                <p>nginden@creativemedia.id</p>
+                <h6>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong> Creative Media Surabaya Barat:</strong></h6>
+                <p>care@creativemedia.id</p>
+              </div>
+
+              <div class="phone">
+                <i class="bi bi-phone"></i>
+                <h4>Call:</h4>
+                <h6>&nbsp;&nbsp;&nbsp; <strong> Creative Media Surabaya Timur:</strong></h6>
+                <p>p. 031 5917 3739 | m. 0821 3131 0210</p>
+                <h6>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong> Creative Media Surabaya Barat:</strong></h6>
+                <p>p. 031 7328 540 | m. 0821 3131 4040</p>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="col-lg-8 mt-5 mt-lg-0">
+
+            <form action="{{ url('/contact') }}" method="POST" class="php-email-form">
+              @csrf
+              <div class="row">
+                <div class="col-md-6 form-group">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                </div>
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                </div>
+              </div>
+              <div class="form-group mt-3">
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+              </div>
+              <div class="form-group mt-3">
+                <textarea class="form-control" name="content" rows="5" placeholder="Pesan - No WA/TELP" required></textarea>
+              </div>
+              <div class="my-3">
+                        @if(Session::has("success"))
+                            <div class="alert alert-success alert-dismissible"><button type="button" class="close">&times;</button>{{Session::get('success')}}</div>
+                        @elseif(Session::has("failed"))
+                            <div class="alert alert-danger alert-dismissible"><button type="button" class="close">&times;</button>{{Session::get('failed')}}</div>
+                        @endif
+              </div>
+              <div class="text-center"><button type="submit">Send Message</button></div>
+            </form>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
 
   </main><!-- End #main -->
   

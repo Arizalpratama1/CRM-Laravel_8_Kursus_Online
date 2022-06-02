@@ -19,7 +19,7 @@ a {
 }
 
 a:hover {
-  color: #86db9f;
+  color: #f35900;
   text-decoration: none;
 }
 
@@ -49,7 +49,7 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 0;
 }
 .back-to-top:hover {
-  background: #7ed899;
+  background: #f35900;
   color: #fff;
 }
 .back-to-top.active {
@@ -455,7 +455,7 @@ section {
   width: 120px;
   height: 1px;
   display: inline-block;
-  background: #9ae1af;
+  background: #f35900;
   margin: 4px 10px;
 }
 .section-title p {
@@ -519,7 +519,7 @@ section {
   display: inline-block;
 }
 .about .content .learn-more-btn:hover {
-  background: #3ac162;
+  background: #f35900;
   color: #fff;
 }
 @media (max-width: 768px) {
@@ -1157,7 +1157,7 @@ section {
 .contact .php-email-form .sent-message {
   display: none;
   color: #fff;
-  background: #18d26e;
+  background: #f35900;
   text-align: center;
   padding: 15px;
   font-weight: 600;
@@ -1175,7 +1175,7 @@ section {
   width: 24px;
   height: 24px;
   margin: 0 10px -6px 0;
-  border: 3px solid #18d26e;
+  border: 3px solid #f35900;
   border-top-color: #eee;
   -webkit-animation: animate-loading 1s linear infinite;
   animation: animate-loading 1s linear infinite;
@@ -1203,7 +1203,7 @@ section {
   border-radius: 50px;
 }
 .contact .php-email-form button[type=submit]:hover {
-  background: #3ac162;
+  background: #f35900;
 }
 @-webkit-keyframes animate-loading {
   0% {
@@ -1330,14 +1330,14 @@ section {
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
 }
 #footer .footer-newsletter form input[type=submit]:hover {
-  background: #3ac162;
+  background: #f35900;
 }
 #footer .credits {
   padding-top: 5px;
   font-size: 13px;
 }
 #footer .credits a {
-  color: #3ac162;
+  color: #f35900;
   transition: 0.3s;
 }
 #footer .credits a:hover {
@@ -1358,7 +1358,7 @@ section {
   transition: 0.3s;
 }
 #footer .social-links a:hover {
-  background: #3ac162;
+  background: #f35900;
   color: #fff;
   text-decoration: none;
 }

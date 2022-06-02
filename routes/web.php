@@ -9,12 +9,17 @@ use App\Http\Controllers\{
     FrontendController,
     KelasController,
     EventController,
-    RoleAksesController
+    RoleAksesController,
+    CallbackController
 };
 
 Route::get('/', [FrontendController::class, 'index']);
 
+Route::post('/contact', [FrontendController::class, 'contact']);
+
 Route::get('/kelas', [FrontendController::class, 'kelas']);
+
+Route::get('/kelas/filter/{id}', [FrontendController::class, 'kelasFilter']);
 
 Route::get('/event', [FrontendController::class, 'event']);
 

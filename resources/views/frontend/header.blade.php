@@ -42,7 +42,7 @@
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center">
 
-      <h1 class="logo me-auto"><a href="#hero">Creative Accademy</a></h1>
+      <h1 class="logo me-auto"><a href="#hero">Creative Academy</a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       
 
@@ -50,29 +50,20 @@
         <ul>
           <li><a class="active" href="{{ url('/') }}#hero">Home</a></li>
           <li><a href="{{ url('/') }}#about">About</a></li>
-          <li><a href="{{ url('/kelas') }}">Courses</a></li>
+          <li class="dropdown"><a href="{{ url('/kelas') }}"><span>Courses</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="{{ url('/kelas') }}">All Courses</a></li>
+              @foreach($kategori_sidebar as $kategori)
+              <li><a href="{{ url('/kelas/filter/'. $kategori->id) }}">{{ $kategori->nama_kategori }}</a></li>
+              @endforeach
+            </ul>
+          </li>
           <li><a href="{{ url('/') }}#trainers">Trainers</a></li>
           <li><a href="{{ url('/event') }}">Events</a></li>
           <!-- <li><a href="pricing.html">Pricing</a></li> -->
 
-          <!-- <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>
-              <li><a href="#">Drop Down 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
-                <ul>
-                  <li><a href="#">Deep Drop Down 1</a></li>
-                  <li><a href="#">Deep Drop Down 2</a></li>
-                  <li><a href="#">Deep Drop Down 3</a></li>
-                  <li><a href="#">Deep Drop Down 4</a></li>
-                  <li><a href="#">Deep Drop Down 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Drop Down 2</a></li>
-              <li><a href="#">Drop Down 3</a></li>
-              <li><a href="#">Drop Down 4</a></li>
-            </ul>
-          </li> -->
-          <li><a href="contact.html">Contact</a></li>
+          
+          <li><a href="{{ url('/') }}#contact">Contact</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
