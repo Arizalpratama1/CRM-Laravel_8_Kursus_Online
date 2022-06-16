@@ -299,33 +299,36 @@ class KelasController extends Controller
         if($request->ajax()){
             $data = Order::latest()->get();
             return DataTables::of($data)
-                ->addIndexColumn()
-                ->addColumn('user_id', function ($data) {
-                    return $data->user->email;
-                })
-                ->addColumn('kelas_id', function ($data) {
-                    return $data->kelas->nama_kelas;
-                })
-                ->addColumn('nominal', function($row){
-                    $nominal = 'Rp. ' . number_format($row->nominal, 0, ',', '.');
-                    return $nominal;
-                })
-                ->addColumn('status', function($row){
-                    if($row->status == 3){
-                        $status = '<div class="badge badge-light-warning">Belum dibayar</div>';
-                    }elseif($row->status == 1){
-                        $status = '<div class="badge badge-light-success">Sudah dibayar</div>';
-                    }elseif($row->status == 2){
-                        $status = '<div class="badge badge-light-danger">Transaksi Expired</div>';
-                    }elseif($row->status == 0){
-                        $status = '<div class="badge badge-light-danger">Transaksi Masih dalam Proses</div>';
-                    }else{
-                        $status = "-";
-                    }
-                    return $status;
-                })
-                ->rawColumns(['user_id','kelas_id','nominal','status'])
-                ->make(true);
+            ->addIndexColumn()
+            ->addColumn('user_id', function ($data) {
+                return $data->user->email;
+            })
+            ->addColumn('no_telp', function ($data) {
+                return $data->user->phone;
+            })
+            ->addColumn('kelas_id', function ($data) {
+                return $data->kelas->nama_kelas;
+            })
+            ->addColumn('nominal', function($row){
+                $nominal = 'Rp. ' . number_format($row->nominal, 0, ',', '.');
+                return $nominal;
+            })
+            ->addColumn('status', function($row){
+                if($row->status == 3){
+                    $status = '<div class="badge badge-light-warning">Belum dibayar</div>';
+                }elseif($row->status == 1){
+                    $status = '<div class="badge badge-light-success">Sudah dibayar</div>';
+                }elseif($row->status == 2){
+                    $status = '<div class="badge badge-light-danger">Transaksi Expired</div>';
+                }elseif($row->status == 0){
+                    $status = '<div class="badge badge-light-danger">Transaksi Masih dalam Proses</div>';
+                }else{
+                    $status = "-";
+                }
+                return $status;
+            })
+            ->rawColumns(['user_id','no_telp','kelas_id','nominal','status'])
+            ->make(true);
         }
 
         return view('backend.pembayaran.index');

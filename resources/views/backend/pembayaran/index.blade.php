@@ -28,6 +28,7 @@ Data Pembelian Kelas
             <tr class="text-center">
                 <th>No</th>
                 <th>Pembeli</th>
+                <th>No Telepon</th>
                 <th>Kelas Yang Di Beli</th>
                 <th>Nominal</th>
                 <th>Status</th>
@@ -54,6 +55,7 @@ Data Pembelian Kelas
             columns: [
                 {data: 'DT_RowIndex', name: 'DT_RowIndex'},
                 {data: 'user_id', name: 'user_id'},
+                {data: 'no_telp', name: 'user_id'},
                 {data: 'kelas_id', name: 'kelas_id'},
                 {data: 'nominal', name: 'nominal'},
                 {data: 'status', name: 'status'}
